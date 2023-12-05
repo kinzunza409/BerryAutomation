@@ -8,3 +8,5 @@ TODOIST_API_TOKEN = os.environ.get("TODOIST_API_TOKEN")
 
 # Initialize API sessions
 todoist = TodoistSession(TODOIST_API_TOKEN)
+projects = todoist.api.get_projects()
+print(projects)
